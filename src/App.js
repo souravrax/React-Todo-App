@@ -3,7 +3,7 @@ import './App.scss';
 
 import TodoForm from './components/TodoForm'
 import TodoList from './components/TodoList'
-
+import Skeleton from './data/skeleton'
 
 
 function App() {
@@ -11,32 +11,10 @@ function App() {
 
 
   useEffect(() => {
-    const skeleton = [
-      {
-        text: "This is a demo todo",
-        isComplete: false
-      },
-      {
-        text: "You can add more todo like this",
-        isComplete: false
-      },
-      {
-        text: "Add by entering the todo in the form below",
-        isComplete: false
-      },
-      {
-        text: "To complete a todo, press the 'complete' button",
-        isComplete: true
-      },
-      {
-        text: "To delete, press teh delete button",
-        isComplete: false
-      }
-    ];
     let localTodo = JSON.parse(localStorage.getItem("todo"));
     let todos;
     if (localTodo == null) {
-      todos = skeleton;
+      todos = Skeleton;
     }
     else todos = localTodo;
 
@@ -48,10 +26,10 @@ function App() {
 
   const addTodo = text => {
     setInteractions(interactions + 1);
-    const newTodo = [...todo, {
+    const newTodo = [{
       text: text,
       isComplete: false
-    }];
+    }, ...todo];
     localStorage.setItem("todo", JSON.stringify(newTodo));
     setTodo(newTodo);
   }
@@ -96,13 +74,22 @@ function App() {
         <TodoForm addTodo={addTodo} />
         <div className="status" style={{ fontFamily: "Poppins" }}>
           <span style={{
-            background: "orangered", borderRadius: "5px", padding: "5px", fontSize: "0.6em",
+            background: "orangered", borderRadius: "5px", padding: "5px", fontSize: "0.8em",
             color: "white"
           }} className="count">Todos : {todo.length}</span>
+          <button
+            onClick={() => {
+              localStorage.clear();
+              setTodo(Skeleton);
+              localStorage.setItem('todo', JSON.stringify(Skeleton));
+            }}
+            className="reset">
+            Reset
+           </button>
           <span style={{
-            background: "green", borderRadius: "5px", padding: "5px", fontSize: "0.6em",
+            background: "green", borderRadius: "5px", padding: "5px", fontSize: "0.8em",
             color: "white"
-          }} className="count">Interections : {interactions}</span>
+          }} className="count">Interactions : {interactions}</span>
         </div>
       </div>
     </>

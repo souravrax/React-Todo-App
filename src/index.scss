@@ -2,12 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins" !important;
 }
 
 body {
   height: 100vh;
   width: 100vw;
-  background-color: #338dc1;
+  background-color: #0c0d0d;
+}
+
+input {
+  outline: none;
 }
 
 #root {
@@ -18,7 +23,9 @@ body {
   justify-content: center;
   align-items: center;
   h1 {
-    font-family: "Pacifico", cursive !important;
+    font-family: "Poppins";
+    letter-spacing: 60px;
+    text-transform: uppercase;
     font-size: 2.2em;
     color: #fff;
     z-index: 2;
