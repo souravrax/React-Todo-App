@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/souravrax.github.io/todo-app/static/css/main.03706253.chunk.css",
-    "main.js": "/souravrax.github.io/todo-app/static/js/main.5ee425fc.chunk.js",
-    "main.js.map": "/souravrax.github.io/todo-app/static/js/main.5ee425fc.chunk.js.map",
+    "main.js": "/souravrax.github.io/todo-app/static/js/main.b9b370af.chunk.js",
+    "main.js.map": "/souravrax.github.io/todo-app/static/js/main.b9b370af.chunk.js.map",
     "runtime-main.js": "/souravrax.github.io/todo-app/static/js/runtime-main.0a2fcb84.js",
     "runtime-main.js.map": "/souravrax.github.io/todo-app/static/js/runtime-main.0a2fcb84.js.map",
     "static/js/2.e40ccce5.chunk.js": "/souravrax.github.io/todo-app/static/js/2.e40ccce5.chunk.js",
     "static/js/2.e40ccce5.chunk.js.map": "/souravrax.github.io/todo-app/static/js/2.e40ccce5.chunk.js.map",
     "index.html": "/souravrax.github.io/todo-app/index.html",
-    "precache-manifest.e7f5bcf55f52ad92357b208ac5df9cd8.js": "/souravrax.github.io/todo-app/precache-manifest.e7f5bcf55f52ad92357b208ac5df9cd8.js",
+    "precache-manifest.3654ab96068d327e1c8aaf00cd95ce19.js": "/souravrax.github.io/todo-app/precache-manifest.3654ab96068d327e1c8aaf00cd95ce19.js",
     "service-worker.js": "/souravrax.github.io/todo-app/service-worker.js",
     "static/css/main.03706253.chunk.css.map": "/souravrax.github.io/todo-app/static/css/main.03706253.chunk.css.map",
     "static/js/2.e40ccce5.chunk.js.LICENSE.txt": "/souravrax.github.io/todo-app/static/js/2.e40ccce5.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0a2fcb84.js",
     "static/js/2.e40ccce5.chunk.js",
     "static/css/main.03706253.chunk.css",
-    "static/js/main.5ee425fc.chunk.js"
+    "static/js/main.b9b370af.chunk.js"
   ]
 }
