@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.scss';
 
 import TodoForm from './components/TodoForm'
@@ -30,29 +30,40 @@ function App() {
     }
   ]);
 
+
+  useEffect(() => {
+    const todos = JSON.parse(localStorage.getItem('todo'));
+    return (
+      setTodo(todos)
+    )
+  }, [])
+
   const [interactions, setInteractions] = useState(0);
 
   const addTodo = text => {
-    setInteractions(interactions+1);
+    setInteractions(interactions + 1);
     const newTodo = [...todo, {
       text: text,
       isComplete: false
     }];
+    localStorage.setItem("todo", JSON.stringify(newTodo));
     setTodo(newTodo);
   }
 
   const toggleTodo = index => {
-    setInteractions(interactions+1);
+    setInteractions(interactions + 1);
     const newTodo = [...todo];
     newTodo[index].isComplete = !newTodo[index].isComplete;
+    localStorage.setItem("todo", JSON.stringify(newTodo));
     setTodo(newTodo);
   }
 
 
   const deleteTodo = index => {
-    setInteractions(interactions+1);
+    setInteractions(interactions + 1);
     const newTodo = [...todo];
     newTodo.splice(index, 1);
+    localStorage.setItem("todo", JSON.stringify(newTodo));
     setTodo(newTodo);
   }
 

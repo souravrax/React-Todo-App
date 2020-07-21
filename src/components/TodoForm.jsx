@@ -8,6 +8,7 @@ const TodoForm = ({ addTodo }) => {
         e.preventDefault();
         if (text) addTodo(text);
         e.target.querySelector("input").value = "";
+        setText("");
     }
 
     return (
