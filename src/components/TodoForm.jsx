@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-
 const TodoForm = ({ addTodo }) => {
     const [text, setText] = useState('');
 

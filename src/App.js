@@ -7,36 +7,42 @@ import TodoList from './components/TodoList'
 
 
 function App() {
-  const [todo, setTodo] = useState([
-    {
-      text: "This is a demo todo",
-      isComplete: false
-    },
-    {
-      text: "You can add more todo like this",
-      isComplete: false
-    },
-    {
-      text: "Add by entering the todo in the form below",
-      isComplete: false
-    },
-    {
-      text: "To complete a todo, press the 'complete' button",
-      isComplete: true
-    },
-    {
-      text: "To delete, press teh delete button",
-      isComplete: false
-    }
-  ]);
+  const [todo, setTodo] = useState([]);
 
 
   useEffect(() => {
-    const todos = JSON.parse(localStorage.getItem('todo'));
-    return (
-      setTodo(todos)
-    )
-  }, [])
+    const skeleton = [
+      {
+        text: "This is a demo todo",
+        isComplete: false
+      },
+      {
+        text: "You can add more todo like this",
+        isComplete: false
+      },
+      {
+        text: "Add by entering the todo in the form below",
+        isComplete: false
+      },
+      {
+        text: "To complete a todo, press the 'complete' button",
+        isComplete: true
+      },
+      {
+        text: "To delete, press teh delete button",
+        isComplete: false
+      }
+    ];
+    let localTodo = JSON.parse(localStorage.getItem("todo"));
+    let todos;
+    if (localTodo == null) {
+      todos = skeleton;
+    }
+    else todos = localTodo;
+
+    localStorage.setItem("todo", JSON.stringify(todos));
+    return setTodo(todos);
+  }, []);
 
   const [interactions, setInteractions] = useState(0);
 
@@ -72,7 +78,7 @@ function App() {
       <h1>Todo App</h1>
       <div className="todo-container">
         {
-          todo.length === 0 ? (<h2
+          (todo === undefined || todo.length === 0) ? (<h2
             style={{
               fontFamily: "Poppins",
               width: "100%",
