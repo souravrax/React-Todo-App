@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "88b81f15d0661f81063bce594e775204",
+    "revision": "06013087833b715cf641492240810dee",
     "url": "/souravrax.github.io/todo-app/index.html"
   },
   {
-    "revision": "a87ddbd7f607f20139c4",
+    "revision": "875e279702bbf8902358",
     "url": "/souravrax.github.io/todo-app/static/css/main.03706253.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/souravrax.github.io/todo-app/static/js/2.e40ccce5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a87ddbd7f607f20139c4",
-    "url": "/souravrax.github.io/todo-app/static/js/main.b26bac14.chunk.js"
+    "revision": "875e279702bbf8902358",
+    "url": "/souravrax.github.io/todo-app/static/js/main.5ee425fc.chunk.js"
   },
   {
     "revision": "50492a8d50a13b0f19a6",
